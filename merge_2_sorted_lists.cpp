@@ -38,12 +38,14 @@ public:
             } else {
                 if(list1->val <= list2->val) {
                     temp->val = list1->val;
+                    list1 = list1->next;
                 } else {
                     temp->val = list2->val;
+                    list2 = list2->next;
                 }
 
-                list1 = list1->next;
-                list2 = list2->next;
+                
+                
             }
             temp->next = new ListNode();
             temp = temp->next;
