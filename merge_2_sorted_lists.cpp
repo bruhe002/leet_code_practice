@@ -49,8 +49,13 @@ public:
                     list2 = list2->next;
                 }
             }
-            temp->next = new ListNode();
-            temp = temp->next;
+            // Check if both lists are null
+            if(list1 == nullptr && list2 == nullptr) {
+                return newList;
+            } else {
+                temp->next = new ListNode();
+                temp = temp->next;
+            }
         }
 
         return newList; 
