@@ -22,7 +22,12 @@ public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         
         // Create new List
-        ListNode *newList;
+        ListNode *newList = new ListNode();
+
+        // Check if both lists are null
+        if(list1 == nullptr && list2 == nullptr) {
+            return nullptr;
+        }
 
         // Create trailing pointer
         ListNode *temp = newList;
@@ -43,9 +48,6 @@ public:
                     temp->val = list2->val;
                     list2 = list2->next;
                 }
-
-                
-                
             }
             temp->next = new ListNode();
             temp = temp->next;
