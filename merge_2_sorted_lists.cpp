@@ -28,7 +28,7 @@ public:
         ListNode *temp = newList;
 
         // Loop through the lists and add to new list
-        while(list1 != nullptr && list2 != nullptr) {
+        while(list1 != nullptr || list2 != nullptr) {
             if (list1 == nullptr) {
                 temp->val = list2->val;
                 list2 = list2->next;
